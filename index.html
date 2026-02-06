@@ -3,166 +3,334 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Bloom</title>
-    <meta name="description" content="A calm, modern landing page template." />
+    <title>Sprouts & Wings Nature Club</title>
+    <meta
+      name="description"
+      content="A playful, reassuring one-page site for a children’s after‑school nature club—tree planting, birdwatching, and creative discovery."
+    />
 
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Local styles -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="container nav">
-        <a class="brand" href="#top" aria-label="Home">
-          <span class="brand-mark"></span>
-          Bloom
-        </a>
-        <nav class="nav-links">
-          <a href="#features">Features</a>
-          <a href="#story">Story</a>
-          <a href="#cta">Pricing</a>
-        </nav>
-        <div class="nav-actions">
-          <a class="ghost" href="#features">Explore</a>
-          <a class="pill" href="#cta">Start free</a>
-        </div>
-      </header>
+    <a class="skip-link" href="#hero">Skip to content</a>
 
-      <main id="top" class="container">
-        <section class="hero">
+    <header class="site-header container" role="banner">
+      <a class="brand" href="#top" aria-label="Sprouts & Wings home">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Leaf + bird beak mark -->
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#22c55e" />
+                <stop offset="1" stop-color="#84cc16" />
+              </linearGradient>
+            </defs>
+            <path d="M6 24c8 2 16-3 18-11-6 1-11 6-12 12-3-3-5-6-6-9 0 4 0 6 0 8z" fill="url(#g1)" />
+            <circle cx="21" cy="9" r="2" fill="#1f2937" />
+          </svg>
+        </span>
+        <strong>Sprouts & Wings</strong>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#activities">Activities</a>
+        <a href="#upcoming">Upcoming</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#safety">Safety</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn ghost" href="#upcoming">View sessions</a>
+        <a class="btn pill" href="#upcoming" id="navJoin">Join</a>
+      </div>
+    </header>
+
+    <main id="top" class="page" role="main">
+      <!-- Hero -->
+      <section id="hero" class="hero container" aria-label="Intro">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-inner">
           <div class="hero-copy">
-            <div class="badge">Fresh drop · crafted for clarity</div>
-            <h1>Build a landing page people fall in love with.</h1>
-            <p class="lede">
-              A light, airy one-page template with room to tell your story, highlight what
-              matters, and guide visitors toward a single, confident action.
-            </p>
+            <h1>Sprouts & Wings Nature Club</h1>
+            <p class="tagline">Hands-on planting, birdwatching, and discovery after school.</p>
             <div class="hero-actions">
-              <a class="pill" href="#cta">Launch in minutes</a>
-              <a class="ghost" href="#features">See what’s inside</a>
+              <a class="btn pill pulse-target" id="joinCta" href="#upcoming">Join the Next Adventure</a>
+              <a class="btn ghost" href="#upcoming">View upcoming sessions</a>
             </div>
-            <ul class="highlights">
-              <li>Responsive out of the box</li>
-              <li>Typography that stays calm under pressure</li>
-              <li>No build tools—just edit and ship</li>
+            <ul class="hero-points">
+              <li>Small groups led by seasoned naturalists</li>
+              <li>Skills that grow: curiosity, care, and confidence</li>
+              <li>Playful learning in nearby parks and gardens</li>
             </ul>
           </div>
-          <div class="hero-visual">
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="floaters">
+              <!-- Plant -->
+              <svg class="floater" viewBox="0 0 64 64" width="64" height="64">
+                <path d="M32 60c2-10 1-18-6-26 10 2 16 8 20 16" fill="none" stroke="#15803d" stroke-width="4" stroke-linecap="round" />
+                <path d="M18 30c8 0 10-10 8-16-8 0-14 8-8 16zm24-4c7 2 14-3 16-10-7-2-14 3-16 10z" fill="#22c55e" />
+              </svg>
+              <!-- Binoculars -->
+              <svg class="floater" viewBox="0 0 64 64" width="64" height="64">
+                <circle cx="20" cy="36" r="10" fill="#0ea5e9" />
+                <circle cx="44" cy="36" r="10" fill="#0ea5e9" />
+                <rect x="26" y="20" width="12" height="24" rx="4" fill="#075985" />
+              </svg>
+              <!-- Bird -->
+              <svg class="floater" viewBox="0 0 64 64" width="72" height="72">
+                <path d="M12 40c10 4 20 0 24-8 6 6 14 6 16 4-6-2-9-7-8-12-8-3-20 0-28 16z" fill="#60a5fa" />
+                <circle cx="36" cy="26" r="2" fill="#1f2937" />
+                <path d="M48 32l8-2-7-4z" fill="#f59e0b" />
+              </svg>
+            </div>
             <div class="glass-card">
-              <p class="eyebrow">Live preview</p>
-              <h3>Less noise, more delight.</h3>
-              <p>
-                Swap copy, adjust colors, and keep the structure. This is your canvas for a
-                graceful announcement, product launch, or portfolio piece.
-              </p>
-              <div class="stat-row">
-                <div>
-                  <div class="stat-number">98%</div>
-                  <small>Happier first impressions</small>
-                </div>
-                <div>
-                  <div class="stat-number">5 min</div>
-                  <small>From clone to live</small>
-                </div>
-              </div>
+              <p class="eyebrow">Today’s forecast</p>
+              <h3>Curiosity with muddy hands.</h3>
+              <p>We plant trees, listen for songs, and sketch what we discover—then share stories together.</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="features" class="section">
-          <div class="section-head">
-            <p class="eyebrow">What’s included</p>
-            <h2>Elegant defaults you can trust.</h2>
+      <!-- About -->
+      <section id="about" class="section container split">
+        <div>
+          <p class="eyebrow">Our mission</p>
+          <h2>Nature immersion that sticks with kids.</h2>
+          <p class="muted">
+            Sprouts & Wings is a warm, after‑school club where children slow down, notice more,
+            and build care for the living world. Sessions blend movement, observation, and
+            creative making.
+          </p>
+          <ul class="checks">
+            <li>Guided by educators and local naturalists</li>
+            <li>Hands‑on skills: planting, bird ID, journaling</li>
+            <li>Always outdoors, rain or shine</li>
+          </ul>
+        </div>
+        <aside class="quote">
+          <blockquote>
+            “My daughter comes home proud, calmer, and full of stories. She’s spotting chickadees on our walks!”
+          </blockquote>
+          <p class="attribution">— Priya M., parent</p>
+        </aside>
+      </section>
+
+      <!-- Activities Highlights -->
+      <section id="activities" class="section container">
+        <div class="section-head">
+          <p class="eyebrow">What we do</p>
+          <h2>Highlights from each week.</h2>
+          <p class="muted">Three anchors that keep curiosity growing.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">🍃</div>
+            <h3>Tree Planting</h3>
+            <p>Dig, water, celebrate tiny victories—and adopt a sapling to watch it thrive.</p>
+            <a class="micro" href="#planting">Learn more</a>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">🔭</div>
+            <h3>Birdwatching Walks</h3>
+            <p>Quiet feet, sharp eyes, and joyful calls when someone spots a new friend.</p>
+            <a class="micro" href="#birdwatching">Learn more</a>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">📓</div>
+            <h3>Nature Crafts & Journaling</h3>
+            <p>Sketch, press leaves, and map a day’s discoveries with color and care.</p>
+            <a class="micro" href="#crafts">Learn more</a>
+          </article>
+        </div>
+        <!-- Anchor targets -->
+        <div class="sr-only" id="planting">Tree planting builds stewardship and patience.</div>
+        <div class="sr-only" id="birdwatching">Birdwatching nurtures pattern recognition and listening.</div>
+        <div class="sr-only" id="crafts">Journaling helps kids reflect and remember.</div>
+      </section>
+
+      <!-- Upcoming Sessions -->
+      <section id="upcoming" class="section container">
+        <div class="section-head">
+          <p class="eyebrow">Reserve a spot</p>
+          <h2>Upcoming sessions</h2>
+          <p class="muted">Drop‑in or book a series—spaces are limited.</p>
+        </div>
+
+        <ol class="timeline" aria-label="Upcoming dates">
+          <li class="time-item">
+            <div class="time-badge">Feb 18</div>
+            <div class="time-card">
+              <h4>Park Tree Planting Starter</h4>
+              <p class="muted">Maple Grove Park • Tools provided • 3:30–5:00pm</p>
+            </div>
+          </li>
+          <li class="time-item">
+            <div class="time-badge">Mar 03</div>
+            <div class="time-card">
+              <h4>Beginner Birdwalk</h4>
+              <p class="muted">Riverside Trail • Binocular basics • 3:30–5:00pm</p>
+            </div>
+          </li>
+          <li class="time-item">
+            <div class="time-badge">Mar 24</div>
+            <div class="time-card">
+              <h4>Nature Journals & Leaf Press</h4>
+              <p class="muted">Community Garden • Bring curiosity • 3:30–5:00pm</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="cta-row">
+          <a class="btn pill" href="#contact" id="bookBtn">Book a Spot</a>
+          <a class="btn ghost" href="#" aria-label="Download printable schedule">Download schedule</a>
+        </div>
+      </section>
+
+      <!-- Gallery / Mood -->
+      <section id="gallery" class="section container">
+        <div class="section-head">
+          <p class="eyebrow">Mood</p>
+          <h2>Moments that feel like this.</h2>
+        </div>
+        <div class="mood-grid" aria-hidden="true">
+          <div class="mood a" title="Leaf close‑up"></div>
+          <div class="mood b" title="Sky blue"></div>
+          <div class="mood c" title="Bird silhouette"></div>
+          <div class="mood d" title="Hands planting"></div>
+          <div class="mood e" title="Journal page"></div>
+        </div>
+      </section>
+
+      <!-- Safety & Values -->
+      <section id="safety" class="section container">
+        <div class="section-head">
+          <p class="eyebrow">Safety & Values</p>
+          <h2>We lead with care.</h2>
+        </div>
+        <div class="values-grid">
+          <article class="value">
+            <div class="icon" aria-hidden="true">🧭</div>
+            <h3>Safe Exploration</h3>
+            <ul>
+              <li>Low ratios and sign‑in/out</li>
+              <li>First‑aid certified guides</li>
+              <li>Clear boundaries and debriefs</li>
+            </ul>
+          </article>
+          <article class="value">
+            <div class="icon" aria-hidden="true">🌿</div>
+            <h3>Expert Guides</h3>
+            <ul>
+              <li>Educators + local naturalists</li>
+              <li>Age‑appropriate challenges</li>
+              <li>Gentle, strengths‑based approach</li>
+            </ul>
+          </article>
+          <article class="value">
+            <div class="icon" aria-hidden="true">♻️</div>
+            <h3>Eco Responsibility</h3>
+            <ul>
+              <li>Leave‑no‑trace habits</li>
+              <li>Native plants and habitats</li>
+              <li>Reuse and simple materials</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section container">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Good to know.</h2>
+        </div>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>
+              <button type="button" aria-expanded="false" aria-controls="a1" id="q1" class="faq-q">
+                What ages can join?
+              </button>
+            </h3>
+            <div id="a1" role="region" aria-labelledby="q1" class="faq-a" hidden>
+              <ul>
+                <li>Designed for ages 6–11.</li>
+                <li>Mixed‑age groups with buddying.</li>
+                <li>Reach out about accessibility needs.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" aria-expanded="false" aria-controls="a2" id="q2" class="faq-q">
+                How long is each session?
+              </button>
+            </h3>
+            <div id="a2" role="region" aria-labelledby="q2" class="faq-a" hidden>
+              <ul>
+                <li>90 minutes, right after school.</li>
+                <li>Seasonal series run 3–6 weeks.</li>
+                <li>Make‑up days offered for heavy weather.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" aria-expanded="false" aria-controls="a3" id="q3" class="faq-q">
+                What should kids bring?
+              </button>
+            </h3>
+            <div id="a3" role="region" aria-labelledby="q3" class="faq-a" hidden>
+              <ul>
+                <li>Water bottle and snack.</li>
+                <li>Closed‑toe shoes, layers, raincoat.</li>
+                <li>We provide tools and materials.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="footer container" role="contentinfo">
+        <div class="footer-grid">
+          <div>
+            <h3>Stay in the loop</h3>
+            <form class="newsletter" action="#" method="post" onsubmit="return false">
+              <label class="sr-only" for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              <button type="submit" class="btn pill" id="newsSubmit">Subscribe</button>
+            </form>
+            <p class="small" id="newsMsg" aria-live="polite"></p>
+          </div>
+          <div class="contact">
+            <h3>Contact</h3>
             <p class="muted">
-              Clean spacing, balanced colors, and thoughtful microcopy—so you can focus on
-              your product instead of pixels.
+              hello@sproutsandwings.org • (555) 341‑7289
             </p>
-          </div>
-          <div class="grid">
-            <article class="feature-card">
-              <div class="icon">✨</div>
-              <h3>Light aesthetic</h3>
-              <p>Soft gradients, airy whitespace, and friendly typography guide the eye.</p>
-            </article>
-            <article class="feature-card">
-              <div class="icon">⚡️</div>
-              <h3>Fast by default</h3>
-              <p>Zero build tools or dependencies—just static files ready for any host.</p>
-            </article>
-            <article class="feature-card">
-              <div class="icon">📱</div>
-              <h3>Responsive</h3>
-              <p>Layouts adapt fluidly across breakpoints without extra work.</p>
-            </article>
-            <article class="feature-card">
-              <div class="icon">🧭</div>
-              <h3>Clear pathways</h3>
-              <p>Calls-to-action stay visible and consistent from hero to footer.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="story" class="section split">
-          <div class="section-head">
-            <p class="eyebrow">Story</p>
-            <h2>Designed for teams who crave simplicity.</h2>
-            <p class="muted">
-              Whether you’re announcing a launch or collecting signups, Bloom keeps things
-              poised and purposeful. Swap in your copy, drop in a few visuals, and you’re ready.
-            </p>
-          </div>
-          <div class="list-card">
-            <div class="list-row">
-              <div class="dot"></div>
-              <div>
-                <h4>Built to feel confident</h4>
-                <p>Every section reinforces a single outcome. Nothing extra, nothing loud.</p>
-              </div>
+            <div class="socials" aria-label="Social links">
+              <a class="social" href="#" aria-label="Instagram">IG</a>
+              <a class="social" href="#" aria-label="Facebook">FB</a>
+              <a class="social" href="#" aria-label="X">X</a>
             </div>
-            <div class="list-row">
-              <div class="dot"></div>
-              <div>
-                <h4>Guided by calm motion</h4>
-                <p>Subtle transitions add depth without distracting from the message.</p>
-              </div>
-            </div>
-            <div class="list-row">
-              <div class="dot"></div>
-              <div>
-                <h4>Ready for any brand</h4>
-                <p>Neutral palette and sensible spacing make customization painless.</p>
-              </div>
-            </div>
+            <small>© <span id="year"></span> Sprouts & Wings Nature Club.</small>
           </div>
-        </section>
-
-        <section id="cta" class="section cta">
-          <div class="cta-inner">
-            <div>
-              <p class="eyebrow">Call to action</p>
-              <h2>Fall in love with your launch.</h2>
-              <p class="muted">
-                Ship the most lovable version of your story today. Update the copy, adjust the
-                accent color, and publish—no fuss.
-              </p>
-            </div>
-            <div class="cta-actions">
-              <button class="pill" id="ctaButton" type="button">Make it yours</button>
-              <p class="small" id="ctaResult" aria-live="polite"></p>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="container footer">
-        <small>© <span id="year"></span> Bloom—crafted for clarity.</small>
+        </div>
       </footer>
-    </div>
+    </main>
 
+    <!-- Local script only (remote scripts are blocked by CI) -->
     <script src="./script.js" defer></script>
   </body>
 </html>
+
